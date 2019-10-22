@@ -1,6 +1,7 @@
 package com.primeotech.primegopilot.core.di.module
 
 import com.primeotech.primegopilot.core.network.NetworkInterfaces
+import com.primeotech.primegopilot.util.ApiServiceBuilder
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
@@ -40,6 +41,12 @@ class NetworkModule {
     internal fun provideApiService(retrofit: Retrofit): NetworkInterfaces {
         return retrofit.create(NetworkInterfaces::class.java)
     }
+
+//    @Provides
+//    @Singleton
+//    internal fun provideApiService(): NetworkInterfaces {
+//        return ApiServiceBuilder.getService()
+//    }
 
     companion object {
 

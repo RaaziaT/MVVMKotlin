@@ -2,6 +2,7 @@ package com.primeotech.primegopilot.core.di.component
 
 import android.app.Application
 import com.primeotech.primegopilot.core.base.PrimeGoPilotApplication
+import com.primeotech.primegopilot.core.di.builder.ActivityBuilder
 import com.primeotech.primegopilot.core.di.module.DatabaseModule
 import com.primeotech.primegopilot.core.di.module.NetworkModule
 import com.primeotech.primegopilot.core.di.module.PrimeGoPilotAppModule
@@ -11,12 +12,9 @@ import dagger.android.AndroidInjector
 import dagger.android.support.AndroidSupportInjectionModule
 
 @Component(
-    modules = [AndroidSupportInjectionModule::class,
-               PrimeGoPilotAppModule::class,
-                DatabaseModule::class,
-                NetworkModule::class]
+    modules = [AndroidSupportInjectionModule::class, PrimeGoPilotAppModule::class,
+        DatabaseModule::class, NetworkModule::class, ActivityBuilder::class]
 )
-
 interface PrimeGoPilotComponent : AndroidInjector<PrimeGoPilotApplication> {
     @Component.Builder
     interface Builder {

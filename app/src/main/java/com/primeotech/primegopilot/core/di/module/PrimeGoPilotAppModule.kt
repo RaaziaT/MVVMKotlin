@@ -8,6 +8,7 @@ import com.bumptech.glide.request.RequestOptions
 import com.google.gson.Gson
 import com.primeotech.primegopilot.core.base.PrimeGoPilotApplication
 import com.primeotech.primegopilot.core.network.NetworkInterfaces
+import com.primeotech.primegopilot.util.ApiServiceBuilder
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
