@@ -13,7 +13,8 @@ import dagger.android.support.AndroidSupportInjectionModule
 
 @Component(
     modules = [AndroidSupportInjectionModule::class, PrimeGoPilotAppModule::class,
-        DatabaseModule::class, NetworkModule::class, ActivityBuilder::class]
+        DatabaseModule::class,
+        NetworkModule::class, ActivityBuilder::class]
 )
 interface PrimeGoPilotComponent : AndroidInjector<PrimeGoPilotApplication> {
     @Component.Builder
